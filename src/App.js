@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
-import LectureGList from './components/LectureGList';
+//import LectureGList from './components/LectureGList';
+import Todos from './components/Todos';
 import Timer from './components/Timer';
 import logo from './logo.svg';
 import './App.css';
+import 'antd/dist/antd.css';
 
-const goals = ['11111', '22222', '33333', '44444', '55555'];
+const goals = [
+  { title: '22222', completed: true },
+  { title: '33333', completed: true },
+  { title: '44444', completed: true },
+  { title: '55555', completed: true },
+  { title: '11111', completed: true },
+];
 
 class App extends Component {
   handleClick(e) {
@@ -32,8 +40,8 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <LectureGList items={goals} title={'강의목표!'} />
-        <Timer expireDate={'2018-07-04T17:00:00+09:00'} />
+        <Todos items={goals} title={'강의목표!'} />
+        {!isExpired && <Timer expireDate={'2018-07-04T17:00:00+09:00'} onComplete={this.handleComplete} />}
       </div>
     );
   }
