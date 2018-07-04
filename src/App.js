@@ -7,6 +7,7 @@ const goals = ['1.xxxx', '2.yyyy', '3.zzz', '4.xxxxxxxxxxxx', '5.gkskddddddddddd
 
 class App extends Component {
   handleClick(e) {
+    //debugger;
     console.log(e.target);
   }
   render() {
