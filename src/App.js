@@ -25,12 +25,12 @@ class App extends Component {
   };
   handleComplete = () => {
     //자식이 종료되고 1초 후에
-    this.setState({ isExpired: true });
+    this.setState({ isExpired: true }); // 에로우 함수 때문에.. this가 작동됨.
     console.log('타이머로 부터 호출 받음...');
   };
 
   render() {
-    const { isExpired } = this.state;
+    const { isExpired } = this.state; // state 값을 꺼내 씀.
     return (
       <div className="App">
         <header className="App-header">
