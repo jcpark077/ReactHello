@@ -19,7 +19,7 @@ class Timer extends Component {
       this.setState({
         date: moment(),
       });
-    }, 1000);
+    }, 3000);
   }
 
   handleTick = () => {
@@ -38,7 +38,7 @@ class Timer extends Component {
 
   render() {
     console.log(this.props.expireDate);
-    console.log(this.props.onComplete);
+    //console.log(this.props.onComplete);
 
     const { expireDate, onComplete } = this.props; // props 값을 꺼내서 사용
     const { date } = this.state; // state 값을 꺼내서 사용
@@ -61,6 +61,7 @@ class Timer extends Component {
   }
 
   componentWillUnmount() {
+    console.log('componentWillUnmount()호출됨....');
     if (this.nTimer) {
       clearInterval(this.nTimer);
       this.nTimer = null;
