@@ -46,7 +46,7 @@ class Timer extends Component {
     if (moment(expireDate) < date) {
       // 만기시각 과 현재시각 비교
       setTimeout(() => {
-        onComplete && onComplete(); // 앞이 true이면, 뒤가 수행됨. pjc 질의 필요...
+        onComplete && onComplete(); // 함수가 잘 defined 되서 넘어 왔으면 true이면, 뒤가 수행됨. pjc 질의 필요...
       }, 1000);
 
       return <div>종료</div>;

@@ -8,11 +8,11 @@ import './App.css';
 //import 'antd/dist/antd.css';
 
 const goals = [
-  { title: '22222', completed: true },
-  { title: '33333', completed: true },
-  { title: '44444', completed: true },
-  { title: '55555', completed: true },
-  { title: '11111', completed: true },
+  { subtitle: '11111', completed: true },
+  { subtitle: '22222', completed: true },
+  { subtitle: '33333', completed: true },
+  { subtitle: '44444', completed: true },
+  { subtitle: '55555', completed: true },
 ];
 
 class App extends Component {
@@ -36,10 +36,13 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <Todos items={goals} title={'강의목표!'} />
+
+        <Todos items={goals} title={'TITLE:___강의목표!'} />
+
         {!isExpired && <Timer key={dateStr} expireDate={dateStr} onComplete={this.handleComplete} />}
       </div>
     );
