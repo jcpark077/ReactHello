@@ -56,7 +56,7 @@ class Todos extends Component {
       <div className="Todos">
         <div>{title}</div>
 
-        <p>{'dddddddddddddd'}</p>
+        <p>{'ddddddddd   ddddd'}</p>
         <Input onPressEnter={this.handlePress} />
 
         <ul>{items.map((itemEach, idx) => <ListItem3 key={idx} {...itemEach} />)}</ul>
